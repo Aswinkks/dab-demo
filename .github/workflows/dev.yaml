@@ -9,6 +9,7 @@ jobs:
   deploy:
     name: "Deploy bundle"
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - uses: actions/checkout@v4  # Update to the latest version
@@ -23,6 +24,7 @@ jobs:
   worflow_run:
     name: "Job run for the workflow"
     runs-on: ubuntu-latest
+    environment: dev
 
     needs:
       - deploy
