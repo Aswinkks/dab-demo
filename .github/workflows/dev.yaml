@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # Update to the latest version
 
       - uses: databricks/setup-cli@main
 
@@ -28,7 +28,7 @@ jobs:
       - deploy
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4  # Update to the latest version
 
       - uses: databricks/setup-cli@main
 
@@ -38,4 +38,4 @@ jobs:
           databricks bundle run datakickstart_dabs_job --refresh-all 2>&1 | tee output.log
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_BUNDLE_ENV: dev
+          DATABRICKS_BUNDLE_ENV: dev error Deploy bundle
